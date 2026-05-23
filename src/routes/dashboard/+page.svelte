@@ -10,7 +10,7 @@
 	import Sidebar from '$lib/components/Sidebar.svelte';
 
 	let { data } = $props();
-	
+
 	let files = $derived(data.files);
 	let currentType = $derived(data.currentType);
 	let availableTags = $derived(data.availableTags);
@@ -33,7 +33,7 @@
 	const previewWeights = [200, 300, 400, 500, 600, 700, 800, 900];
 
 	import { onMount } from 'svelte';
-	
+
 	onMount(() => {
 		if ($page.url.searchParams.get('login') === 'success') {
 			toast.success('Welcome back to the workspace.');
@@ -139,7 +139,7 @@
 </script>
 
 <div class="fixed inset-0 flex bg-zinc-950 overflow-hidden">
-	<Sidebar 
+	<Sidebar
 		{supabase}
 		{currentType}
 		{availableTags}
@@ -166,7 +166,7 @@
 			<h2 class="text-lg font-medium text-zinc-100 capitalize font-display whitespace-nowrap">
 				{currentType.replace('_', ' ')}s
 			</h2>
-			
+
 			{#if currentType === 'font'}
 				<div class="flex-1 flex items-center gap-3">
 					<input
@@ -240,7 +240,7 @@
 											{@const fIndex = filteredFiles().findIndex(f => f.id === file.id)}
 											<!-- svelte-ignore a11y_click_events_have_key_events -->
 											<!-- svelte-ignore a11y_no_static_element_interactions -->
-											<div 
+											<div
 												class="group relative bg-zinc-900/50 rounded-xl overflow-hidden border border-zinc-800/50 hover:border-amber-500/50 transition-all cursor-pointer aspect-[4/3] flex items-center justify-center"
 												onclick={() => selectedFileIndex = fIndex}
 											>
@@ -257,7 +257,7 @@
 												{:else}
 													<img src={file.url} alt="" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
 												{/if}
-												
+
 												<!-- Hover Overlay -->
 							<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end p-4">
 								<div class="text-sm font-medium text-white truncate drop-shadow-md mb-1">{file.type === 'font' ? getFontDisplayName(file.file_name) : file.file_name}</div>
@@ -315,7 +315,7 @@
 								{#each filteredFiles() as file, i (file.id)}
 									<!-- svelte-ignore a11y_click_events_have_key_events -->
 									<!-- svelte-ignore a11y_no_static_element_interactions -->
-									<div 
+									<div
 										class="group relative bg-zinc-900/50 rounded-xl overflow-hidden border border-zinc-800/50 hover:border-amber-500/50 transition-all cursor-pointer aspect-[4/3] flex items-center justify-center"
 										onclick={() => selectedFileIndex = i}
 									>
@@ -332,7 +332,7 @@
 									{:else}
 										<img src={file.url} alt="" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
 									{/if}
-									
+
 									<!-- Hover Overlay -->
 									<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex flex-col justify-end p-4">
 										<div class="text-sm font-medium text-white truncate drop-shadow-md mb-1">{file.type === 'font' ? getFontDisplayName(file.file_name) : file.file_name}</div>
@@ -358,7 +358,7 @@
 	</main>
 
 	<footer class="absolute bottom-0 left-[288px] right-0 border-t border-zinc-800/50 px-8 py-4 text-center text-sm text-zinc-500 bg-zinc-900">
-		Made with ❤️ by <a href="https://github.com/mihirgrand" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-zinc-200 transition-colors">Mihir</a>
+		Made with ❤️ by <a href="https://github.com/mihirgrand" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-zinc-200 transition-colors">Mihir</a> | Icons by <a href="https://icons8.com" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-zinc-200 transition-colors">Icons8</a>
 	</footer>
 </div>
 
@@ -367,12 +367,12 @@
 {/if}
 
 {#if selectedFileIndex !== -1}
-					<GalleryModal 
-						files={filteredFiles()} 
-						currentIndex={selectedFileIndex} 
-						{supabase} 
+					<GalleryModal
+						files={filteredFiles()}
+						currentIndex={selectedFileIndex}
+						{supabase}
 						previewText={previewText}
-						onClose={() => selectedFileIndex = -1} 
+						onClose={() => selectedFileIndex = -1}
 						onUpdate={invalidateAll}
 						onChangeIndex={(idx: number) => selectedFileIndex = idx}
 						/>
