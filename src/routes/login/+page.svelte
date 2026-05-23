@@ -42,7 +42,7 @@
 		
 		<div class="relative z-10">
 			<a href="/" class="text-3xl font-bold font-display tracking-tight text-zinc-100 flex items-center gap-3 w-max">
-				<div class="w-8 h-8 bg-amber-500 rounded-sm rotate-3"></div>
+				<img src="/favicon-96x96.png" alt="Forma Logo" class="w-8 h-8" />
 				Forma
 			</a>
 		</div>
@@ -61,7 +61,7 @@
 	<div class="w-full lg:w-1/2 flex items-center justify-center p-8 relative pointer-events-auto bg-zinc-950/80 backdrop-blur-md" in:fade={{duration: 400, delay: 100}}>
 		<!-- Mobile Logo -->
 		<a href="/" class="absolute top-8 left-8 lg:hidden text-2xl font-bold font-display tracking-tight text-zinc-100 flex items-center gap-2">
-			<div class="w-6 h-6 bg-amber-500 rounded-sm rotate-3"></div>
+			<img src="/favicon-96x96.png" alt="Forma Logo" class="w-6 h-6" />
 			Forma
 		</a>
 

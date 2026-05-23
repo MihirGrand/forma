@@ -55,7 +55,7 @@
 		<header class="border-b border-zinc-800/50 bg-zinc-950/80 backdrop-blur-md sticky top-0 z-40">
 			<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 				<a href="/" class="text-2xl font-bold font-display tracking-tight text-zinc-100 flex items-center gap-2">
-					<div class="w-6 h-6 bg-amber-500 rounded-sm rotate-3"></div>
+					<img src="/favicon-96x96.png" alt="Forma Logo" class="w-6 h-6" />
 					Forma
 				</a>
 				<div class="flex items-center space-x-6 text-sm font-medium text-zinc-400">

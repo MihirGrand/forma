@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { invalidateAll } from '$app/navigation';
-	import { page } from '$app/stores';
+	import { navigating, page } from '$app/stores';
 	import { ImageIcon, Type, LayoutGrid, Rows3, Maximize2, List } from '@lucide/svelte';
 	import { fade } from 'svelte/transition';
 	import { toast } from 'svelte-sonner';
@@ -156,6 +156,11 @@
 	/>
 
 	<main class="flex-1 flex flex-col h-full overflow-hidden bg-zinc-950 relative">
+		{#if $navigating}
+			<div class="absolute top-0 left-0 right-0 h-1 overflow-hidden z-20">
+				<div class="loader-bar h-full bg-amber-500/80"></div>
+			</div>
+		{/if}
 		<!-- Top Bar -->
 		<div class="min-h-16 border-b border-zinc-800/50 flex items-center justify-between px-8 py-3 flex-shrink-0 gap-6">
 			<h2 class="text-lg font-medium text-zinc-100 capitalize font-display whitespace-nowrap">
@@ -370,5 +375,24 @@
 						onClose={() => selectedFileIndex = -1} 
 						onUpdate={invalidateAll}
 						onChangeIndex={(idx: number) => selectedFileIndex = idx}
-					/>
+						/>
 {/if}
+
+<style>
+	.loader-bar {
+		transform: translateX(-100%);
+		animation: loader-bar 1.2s ease-in-out infinite;
+	}
+
+	@keyframes loader-bar {
+		0% {
+			transform: translateX(-100%);
+		}
+		50% {
+			transform: translateX(0%);
+		}
+		100% {
+			transform: translateX(100%);
+		}
+	}
+</style>

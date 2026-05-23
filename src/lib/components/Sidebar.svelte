@@ -63,7 +63,7 @@
 	<!-- Header / Logo -->
 	<div class="h-16 px-6 flex items-center border-b border-zinc-800/50 flex-shrink-0">
 		<a href="/" class="text-xl font-bold font-display tracking-tight text-zinc-100 flex items-center gap-2">
-			<div class="w-5 h-5 bg-amber-500 rounded-sm rotate-3"></div>
+			<img src="/favicon-32x32.png" alt="Forma Logo" class="w-5 h-5" />
 			Forma
 		</a>
 	</div>
