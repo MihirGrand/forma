@@ -18,6 +18,7 @@ Quick start (local)
 4. Run the dev server: `npm run dev`
 
 TODO
+
 [ ] Better search and filtering across names, tags, and sample text
 [ ] Favorites and collections so users can save and organize assets
 [ ] Curated collections and pairing suggestions for fonts and UI elements
