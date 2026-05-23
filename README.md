@@ -1,42 +1,39 @@
-# sv
+<div align="center">
+  <h1>Forma</h1>
+  <p style="font-size:1.05rem; margin-top:0.25rem; color:#444">A simple, beautiful dashboard to preview and manage visual assets</p>
+</div>
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Forma helps designers and teams preview, organize, and share visual assets, not just fonts. Use it for fonts, images, UI components, and other design files that benefit from quick visual inspection.
 
-## Creating a project
+What you can do
+- Preview fonts with live samples (adjust size, weight, and sample text)
+- Browse assets in grid or list views
+- Tag assets and filter by tag or type
+- Create invite codes and manage who can access the workspace (admin area)
 
-If you're seeing this, you've probably already done this step. Congrats!
+Quick start (local)
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Set your Supabase environment variables (Supabase URL + anon key) in a `.env` or your environment
+4. Run the dev server: `npm run dev`
 
-```sh
-# create a new project
-npx sv create my-app
-```
+TODO
+[ ] Better search and filtering across names, tags, and sample text
+[ ] Favorites and collections so users can save and organize assets
+[ ] Curated collections and pairing suggestions for fonts and UI elements
+[ ] Easy export: CSS snippets or bundled asset packs for designers and devs
+[ ] Smoother upload flow with progress indicators and instant previews
+[ ] Keyboard shortcuts for power users
+[ ] A friendly getting-started tour for new users
 
-To recreate this project with the same configuration:
+Contributing
+- Be friendly and keep changes focused and small.
+- Use branch names like `feature/short-description` or `fix/short-description`.
+- Run the app locally and check the views you touched. If you modify JS/TS, run `npm run check` or the project's lint/type checks.
+- Write clear, present-tense commit messages (e.g., "Add list view to font dashboard").
+- Open a Pull Request with a short description, why it’s needed, and manual steps to test it.
 
-```sh
-# recreate this project
-npx sv@0.15.3 create --template minimal --types ts --no-install .
-```
+If you need access or help
+Contact a project admin to request access or an invite code.
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Thanks for helping shape Forma! Whether you report a bug, improve accessibility, or add a fresh idea.
