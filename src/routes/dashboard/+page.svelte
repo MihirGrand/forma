@@ -216,7 +216,7 @@
 		</div>
 
 		<!-- Masonry/Grid Canvas -->
-		<div class="flex-1 overflow-y-auto p-8 pb-14">
+		<div class="flex-1 overflow-y-auto p-8 pb-24">
 			{#key currentType}
 				<div in:fade={{ duration: 300, delay: 100 }} out:fade={{ duration: 150 }} class="h-full">
 					{#if currentType === 'font'}

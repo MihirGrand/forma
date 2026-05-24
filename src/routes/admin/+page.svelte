@@ -26,7 +26,7 @@
 		<div class="max-w-4xl mx-auto px-8 py-12 space-y-12">
 			<div>
 				<h1 class="text-3xl font-display font-bold text-zinc-100">Admin Settings</h1>
-				<p class="text-zinc-500 mt-2">Manage site configuration and beta invitations.</p>
+				<p class="text-zinc-500 mt-2">Manage site configuration and user access.</p>
 			</div>
 
 			{#if form?.message}
