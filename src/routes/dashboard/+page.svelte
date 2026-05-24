@@ -216,7 +216,7 @@
 		</div>
 
 		<!-- Masonry/Grid Canvas -->
-		<div class="flex-1 overflow-y-auto p-8 pb-32">
+		<div class="flex-1 overflow-y-auto p-8 pb-40">
 			{#key currentType}
 				<div in:fade={{ duration: 300, delay: 100 }} out:fade={{ duration: 150 }} class="h-full">
 					{#if currentType === 'font'}
@@ -357,7 +357,7 @@
 		</div>
 	</main>
 
-	<footer class="sticky bottom-0 left-0 right-0 border-t border-zinc-800/50 px-8 py-4 text-center text-sm text-zinc-500 bg-zinc-900/95 backdrop-blur">
+	<footer class="absolute bottom-0 left-[288px] right-0 border-t border-zinc-800/50 px-8 py-4 text-center text-sm text-zinc-500 bg-zinc-900">
 		Made with ❤️ by <a href="https://github.com/mihirgrand" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-zinc-200 transition-colors">Mihir</a> | Icons by <a href="https://icons8.com" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-zinc-200 transition-colors">Icons8</a>
 	</footer>
 </div>
